@@ -1,0 +1,340 @@
+{
+    "$schema": "../schemas/gameData.schema.json",
+    "gameplay": {
+        "name": "Gameplay",
+        "description": "",
+        "isVisibleInEditor": true,
+        "options": {
+            "soundsVolume": {
+                "name": "Sounds volume",
+                "description": "Changes sounds volume.",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "range",
+                "data": {
+                    "value": 0.5,
+                    "minValue": 0,
+                    "maxValue": 1
+                }
+            }
+        }
+    },
+    "sounds": {
+        "name": "Sounds",
+        "description": "",
+        "isVisibleInEditor": true,
+        "options": {
+            "game_over": {
+                "name": "Game Over",
+                "description": "Ticking SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/game_over.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            },
+            "button": {
+                "name": "Button click SFX",
+                "description": "SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/button.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            },
+            "checkbox": {
+                "name": "Checkbox click SFX",
+                "description": "SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/checkbox.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            },
+            "popup_hide": {
+                "name": "Popup SFX",
+                "description": "SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/popup_hide.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            },
+            "popup_show": {
+                "name": "Popup SFX",
+                "description": "SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/popup_show.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            },
+            "drop": {
+                "name": "Popup SFX",
+                "description": "SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/drop.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            },
+            "line": {
+                "name": "Popup SFX",
+                "description": "SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/line.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            },
+            "tetris": {
+                "name": "Popup SFX",
+                "description": "SFX (*.mp3 file).",
+                "isFavorite": false,
+                "isVisibleInEditor": true,
+                "valueType": "sound",
+                "data": {
+                    "path": "assets/sounds/tetris.mp3",
+                    "supportedExtensions": [
+                        "mp3"
+                    ]
+                }
+            }
+        }
+    },
+    "atlases": {
+        "name": "Atlases",
+        "description": "",
+        "isVisibleInEditor": true,
+        "options": {
+            "mainAtlas": {
+                "name": "Main atlas",
+                "description": "Main atlas of the game with all textures (*.png or *.jpg file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "atlas",
+                "data": {
+                    "imagePath": "assets/desktop/mainAtlas.png",
+                    "configPath": "assets/desktop/mainAtlas.json",
+                    "supportedExtensions": [
+                        "jpg",
+                        "png"
+                    ]
+                }
+            },
+            "boardAtlas": {
+                "name": "Board atlas",
+                "description": "Board atlas of the game with all textures (*.png or *.jpg file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "atlas",
+                "data": {
+                    "imagePath": "assets/desktop/boardAtlas.png",
+                    "configPath": "assets/desktop/boardAtlas.json",
+                    "supportedExtensions": [
+                        "jpg",
+                        "png"
+                    ]
+                }
+            },
+            "splashAtlas": {
+                "name": "Splash atlas",
+                "description": "Title screen atlas.",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "atlas",
+                "data": {
+                    "imagePath": "assets/desktop/splashAtlas.png",
+                    "configPath": "assets/desktop/splashAtlas.json",
+                    "supportedExtensions": [
+                        "jpg",
+                        "png"
+                    ]
+                }
+            },
+            "popupAtlas": {
+                "name": "Popup atlas",
+                "description": "How to play popup atlas",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "atlas",
+                "data": {
+                    "imagePath": "assets/desktop/popupAtlas.png",
+                    "configPath": "assets/desktop/popupAtlas.json",
+                    "supportedExtensions": [
+                        "jpg",
+                        "png"
+                    ]
+                }
+            }
+        }
+    },
+    "spritesheets": {
+        "name": "Spritesheets",
+        "description": "",
+        "isVisibleInEditor": true,
+        "options": {}
+    },
+    "textures": {
+        "name": "Textures",
+        "description": "",
+        "isVisibleInEditor": true,
+        "options": {
+            "background": {
+                "name": "Background",
+                "description": "Background image (width: 600px, height: 800px, *.jpg file).",
+                "isFavorite": true,
+                "isVisibleInEditor": true,
+                "valueType": "image",
+                "data": {
+                    "path": "assets/desktop/background.jpg",
+                    "isSizeRestricted": true,
+                    "width": 600,
+                    "height": 800,
+                    "supportedExtensions": [
+                        "jpg"
+                    ]
+                }
+            }
+        }
+    },
+    "layouts": {
+        "name": "Layouts",
+        "description": "",
+        "isVisibleInEditor": false,
+        "options": {
+            "titleLayout": {
+                "name": "Title Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/titleLayout.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            },
+            "gameplayLayout": {
+                "name": "Gameplay Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/gameplayLayout.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            },
+            "hudLayout": {
+                "name": "HUD Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/hudLayout.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            },
+            "gameOverLayout": {
+                "name": "Game Over Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/gameOverLayout.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            },
+            "welcomePopup": {
+                "name": "Welcome Popup Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/welcomePopup.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            },
+            "tutorialPopup": {
+                "name": "Tutorial Popup Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/tutorialPopup.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            },
+            "resultsPopup": {
+                "name": "Results Popup Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/resultsPopup.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            },
+            "quitPopup": {
+                "name": "Quit Game Layout",
+                "description": "File that describes how textures should be layed out ( *.json file).",
+                "isFavorite": false,
+                "isVisibleInEditor": false,
+                "valueType": "jsonFile",
+                "data": {
+                    "path": "assets/desktop/layouts/quitPopup.json",
+                    "supportedExtensions": [
+                        "json"
+                    ]
+                }
+            }
+        }
+    }
+}

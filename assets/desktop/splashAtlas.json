@@ -1,0 +1,28 @@
+{"frames": {
+
+"splashBurst.png":
+{
+	"frame": {"x":1,"y":288,"w":800,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":800,"h":600},
+	"sourceSize": {"w":800,"h":600}
+},
+"splashLogo.png":
+{
+	"frame": {"x":1,"y":1,"w":897,"h":285},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":108,"w":897,"h":285},
+	"sourceSize": {"w":950,"h":492}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "splashAtlas.png",
+	"format": "RGBA8888",
+	"size": {"w":899,"h":889},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:eb1378aae7c6f105d3e2f32c64c1c3e0:376cc0fe7917263f8a02819d130d32c4:2ee5b55c64f1748c0abf8cc9a6df7dbb$"
+}
+}

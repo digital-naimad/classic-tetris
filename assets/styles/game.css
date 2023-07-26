@@ -1,0 +1,17 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+#phaserCanvasWrapper {
+    position: relative;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    display: block; /* fix necessary to remove space at bottom of canvas */
+}

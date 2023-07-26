@@ -1,0 +1,461 @@
+{
+    "title": "GameData",
+    "properties": {
+        "$schema": {
+            "default": "../schemas/gameData.schema.json",
+            "description": "Location of JSON schema file.",
+            "type": "string"
+        }
+    },
+    "patternProperties": {
+        "^([a-zA-Z]+)$|^([a-zA-Z]+\\_{1}\\d+)$": {
+            "$ref": "#definitions/Section"
+        }
+    },
+    "additionalProperties": false,
+    "definitions": {
+        "Section": {
+            "type": "object",
+            "description": "Section name.",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Section property."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Section property."
+                },
+                "isVisibleInEditor": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Section property."
+                },
+                "options": {
+                    "type": "object",
+                    "description": "This section's options.",
+                    "patternProperties": {
+                        "^([a-zA-Z]+)$|^([a-zA-Z]+\\_{1}\\d+)$": {
+                            "$ref": "#definitions/Option"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "description",
+                "isVisibleInEditor",
+                "options"
+            ],
+            "additionalProperties": false
+        },
+        "Option": {
+            "description": "Option property.",
+            "oneOf": [
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "integer",
+                                "float",
+                                "range"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/NumberType"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "array_integer",
+                                "array_float"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/ArrayType"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "atlas"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/AtlasType"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "boolean"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/BoolType"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "jsonFile",
+                                "sound"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/FileType"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "tile",
+                                "image"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/ImageType"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "spritesheet"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/SpritesheetType"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "isFavorite": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "isVisibleInEditor": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "valueType": {
+                            "enum": [
+                                "string"
+                            ]
+                        },
+                        "data": {
+                            "$ref": "#definitions/StringType"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            ],
+            "required": [
+                "name",
+                "description",
+                "isFavorite",
+                "isVisibleInEditor",
+                "valueType",
+                "data"
+            ]
+        },
+        "ArrayType": {
+            "properties": {
+                "value": {
+                    "type": "array",
+                    "default": [
+                        0
+                    ]
+                },
+                "minElementValue": {
+                    "type": "integer",
+                    "default": -9999999999
+                },
+                "maxElementValue": {
+                    "type": "integer",
+                    "default": 9999999999
+                }
+            },
+            "required": [
+                "value",
+                "minElementValue",
+                "maxElementValue"
+            ],
+            "additionalProperties": false
+        },
+        "AtlasType": {
+            "properties": {
+                "imagePath": {
+                    "type": "string"
+                },
+                "configPath": {
+                    "type": "string"
+                },
+                "supportedExtensions": {
+                    "type": "array",
+                    "default": [
+                        "png"
+                    ]
+                }
+            },
+            "required": [
+                "imagePath",
+                "configPath",
+                "supportedExtensions"
+            ],
+            "additionalProperties": false
+        },
+        "BoolType": {
+            "properties": {
+                "value": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "value"
+            ],
+            "additionalProperties": false
+        },
+        "FileType": {
+            "description": "Use this type to store path to the .mp3, .json or other file.",
+            "properties": {
+                "path": {
+                    "type": "string"
+                },
+                "supportedExtensions": {
+                    "type": "array",
+                    "default": [
+                        "json"
+                    ]
+                }
+            },
+            "required": [
+                "path",
+                "supportedExtensions"
+            ],
+            "additionalProperties": false
+        },
+        "ImageType": {
+            "properties": {
+                "path": {
+                    "type": "string"
+                },
+                "isSizeRestricted": {
+                    "type": "boolean"
+                },
+                "width": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "number"
+                },
+                "supportedExtensions": {
+                    "type": "array",
+                    "default": [
+                        "png"
+                    ]
+                }
+            },
+            "required": [
+                "path",
+                "isSizeRestricted",
+                "width",
+                "height",
+                "supportedExtensions"
+            ],
+            "additionalProperties": false
+        },
+        "NumberType": {
+            "properties": {
+                "value": {
+                    "type": "number"
+                },
+                "minValue": {
+                    "type": "number"
+                },
+                "maxValue": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "value",
+                "minValue",
+                "maxValue"
+            ],
+            "additionalProperties": false
+        },
+        "SpritesheetType": {
+            "properties": {
+                "imagePath": {
+                    "type": "string"
+                },
+                "frameWidth": {
+                    "type": "number"
+                },
+                "frameHeight": {
+                    "type": "number"
+                },
+                "isSizeRestricted": {
+                    "type": "boolean"
+                },
+                "width": {
+                    "type": "number"
+                },
+                "height": {
+                    "type": "number"
+                },
+                "supportedExtensions": {
+                    "type": "array",
+                    "default": [
+                        "png"
+                    ]
+                }
+            },
+            "required": [
+                "imagePath",
+                "frameWidth",
+                "frameHeight",
+                "isSizeRestricted",
+                "width",
+                "height",
+                "supportedExtensions"
+            ],
+            "additionalProperties": false
+        },
+        "StringType": {
+            "properties": {
+                "value": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "value"
+            ],
+            "additionalProperties": false
+        }
+    }
+}

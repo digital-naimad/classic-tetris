@@ -1,0 +1,6 @@
+{
+  "list": [
+    "./external-js-libs/*.js",
+    "./dist/ts-release/ts.js"
+  ]
+}

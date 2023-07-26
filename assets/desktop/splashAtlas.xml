@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:6ea6f66e127c533866771037cb25c9b8:07ff90eded5d897197f31e1a5f46c787:b86796e0c525392154a3bd036e99cb93$ -->
+<TextureAtlas imagePath="splashAtlas.png" width="802" height="905">
+    <SubTexture name="splashBurst" x="1" y="1" width="800" height="600"/>
+    <SubTexture name="splashLogo" x="1" y="603" width="599" height="301" frameX="-157" frameY="-86" frameWidth="950" frameHeight="492"/>
+</TextureAtlas>

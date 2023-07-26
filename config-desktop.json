@@ -1,0 +1,10 @@
+{
+  "title": "Classic Tetris",
+  "short_title": "CT",
+  "device": "desktop",
+  "version": "0.0.4",
+  "resolution": {
+    "width": 800,
+    "height": 600
+  }
+}

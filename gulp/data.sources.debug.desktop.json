@@ -1,0 +1,14 @@
+{
+  "list": [
+    "./node_modules/phaser/build/phaser.js",
+    "./assets/desktop/**/*",
+    "./assets/sounds/**/*",
+    "./assets/fonts/**/*",
+    "./assets/fontsStyles/**/*",
+    "./assets/styles/**/*",
+    "./external-js-libs/*.js",
+    "./dist/ts-debug/ts.js",
+    "./index.htm",
+    "./config-desktop.json"
+  ]
+}
